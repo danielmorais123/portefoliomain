@@ -1,8 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import reactlogo from '../img/react.png';
+import React from "react";
+import { motion } from "framer-motion";
+import reactlogo from "../img/react.png";
 
-const ExperienceCard = ({ image }) => {
+const ExperienceCard = ({
+  image,
+  company,
+  points,
+  startDate,
+  endDate,
+  type,
+  languages
+}) => {
   return (
     <article className="flex flex-col rounded-lg mt-10 items-center space-y-7 flex-shrink-0 w-full sm:w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-10 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
@@ -10,27 +18,25 @@ const ExperienceCard = ({ image }) => {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="w-32 h-32  rounded-full xl:w-[200px]  object-contain object-center"
         src={image}
       />
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">Build Up Labs</h4>
-        <p className="font-bold text-2xl mt-1">Internship</p>
+        <h4 className="text-4xl font-light">{company}</h4>
+        <p className="font-bold text-2xl mt-1">{type}</p>
         <div className="flex space-x-2 my-2">
-          <img
-            className="h-10 w-10 rounded-full"
-            src="https://cdn-images-1.medium.com/max/800/1*Mn_mGNUGxK6gCROym_z8Bg.png"
-          />
+          {languages.map((l, index) => (
+            <img className="h-10 w-10 rounded-full" src={l} />
+          ))}
           <img className="h-10 w-10 rounded-full" src={reactlogo} />
         </div>
         <p className="uppercase py-5 text-gray-300">
-          May,30 2022 - August,30 2022
+          {startDate} - {endDate}
         </p>
         <ul className="list-disc space-y-4 ml-5 text-lg">
-          <li>Summary points Summary points Summary points</li>
-          <li>Summary Summary points Summary points</li>
-          <li>Summary Summary points Summary points</li>
-          <li>Summary Summary points Summary points</li>
+          {points.map((point, index) => (
+            <li key={index}>{point}</li>
+          ))}
         </ul>
       </div>
     </article>

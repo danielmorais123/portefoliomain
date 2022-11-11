@@ -19,11 +19,7 @@ const Skills = () => {
         Hover over a skill for a currency profienciency
       </h3>
       <div className="sm:grid grid-cols-4 gap-5 p-5 flex flex-wrap flex-row justify-center">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill  />
-        <Skill />
+      
       </div>
     </motion.div>
   );

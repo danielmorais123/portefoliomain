@@ -25,7 +25,7 @@ const ContactMe = () => {
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="h-7 w-7 animate-pulse text-[#F7AB0A]/40" />
-            <p className="text-xl">moraisartic01@gmail.com</p>
+            <p className="md:text-xl text-md">moraisalexandre01@hotmail.com</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="h-7 w-7 animate-pulse text-[#F7AB0A]/40" />

@@ -1,12 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
+import discrd from "../img/discrd.png";
 import ubereats from "../img/ubereats.png";
 const Projects = () => {
   const projects = [
     {
-      title: "Uber Eats",
+      title: "Uber Eats Clone",
       image: ubereats,
-      description: "This project was a Uber Eats clone",
+      description:
+        "This project was a Uber Eats clone made with React Native, Firebase and Yelp API to fetch the meals.",
+    },
+    {
+      title: "Discord Clone",
+      image: discrd,
+      description:
+        "This Discord clone was a front-end challenge to make the main discord page only.",
     },
   ];
 
@@ -23,7 +31,7 @@ const Projects = () => {
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin">
         {projects.map((project, idx) => (
           <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-            <img src={project.image}  className="object-cover w-[800px]" />
+            <img src={project.image} className="object-cover w-[800px]" />
             <div className="text-center ">
               <h4 className="font-semibold text-lg md:text-3xl ">
                 Project {idx + 1} of {projects.length}: {project.title}

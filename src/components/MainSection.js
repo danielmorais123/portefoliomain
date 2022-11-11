@@ -1,10 +1,11 @@
-import React from 'react';
-import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import BackgroundCircles from './BackgroundCircles';
+import React from "react";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
+import BackgroundCircles from "./BackgroundCircles";
+import daniel from "../img/daniel.jpg"
 
 const MainSection = () => {
   const [text, count] = useTypewriter({
-    words: ['Programming', 'Learn'],
+    words: ["Programming", "Learn"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -13,7 +14,7 @@ const MainSection = () => {
       <BackgroundCircles />
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src="https://scontent.flis11-2.fna.fbcdn.net/v/t1.6435-9/125310022_1652899404882858_6815665546785122466_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Aqkh56BfusQAX_V-goX&_nc_ht=scontent.flis11-2.fna&oh=00_AT_lllQzhuIpir8Bgj7vNkdSNUgNIKzMcOEM7ReOLyRvrQ&oe=63593740"
+        src={daniel}
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[10px]">
@@ -31,9 +32,9 @@ const MainSection = () => {
           <a href="#experience">
             <button className="infoButtons">Experience</button>
           </a>
-          <a href="#skills">
+          {/**      <a href="#skills">
             <button className="infoButtons">Skills</button>
-          </a>
+          </a>*/}
           <a href="#projects">
             <button className="infoButtons">Projects</button>
           </a>

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import daniel from "../img/daniel.jpg";
 const About = () => {
   return (
     <motion.div
@@ -20,7 +20,7 @@ const About = () => {
         }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1.2 }}
-        src="https://scontent.flis11-2.fna.fbcdn.net/v/t1.6435-9/125310022_1652899404882858_6815665546785122466_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Aqkh56BfusQAX_V-goX&_nc_ht=scontent.flis11-2.fna&oh=00_AT_lllQzhuIpir8Bgj7vNkdSNUgNIKzMcOEM7ReOLyRvrQ&oe=63593740"
+        src={daniel}
         className="mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
       />
       <motion.div
@@ -34,8 +34,15 @@ const About = () => {
           background{" "}
         </h4>
         <p className="text-base">
-          I'm Daniel, I'm 21 years old and I am a Front-End Developer. I studied
-          in Polytechnic Institute of Setubal in Software Engineering
+          I'm Daniel, I'm 21 years old and I am a Front-End Developer/ Full
+          Stack Developer. I studied in Polytechnic Institute of Setubal in
+          Software Engineering. I have a lot of experience in React and Tailwind
+          CSS due to my personal projects in which I learned a lot about those
+          frameworks in order to make my skills better and better. My main
+          Programming skills are: React, Tailwind CSS, Java, C#,
+          Next.JS,Javascript, HTML,CSS. I love programming and I want to learn
+          every day new ways to get better and learn new languages, for
+          instance, python.
         </p>
       </motion.div>
     </motion.div>
