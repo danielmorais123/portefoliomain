@@ -15,6 +15,7 @@ const Projects = () => {
       image: discrd,
       description:
         "This Discord clone was a front-end challenge to make the main discord page only.",
+      link: "https://discord-clone-daniel.netlify.app/"
     },
   ];
 
@@ -39,9 +40,11 @@ const Projects = () => {
               <p className=" text-center md:text-left text-sm md:text-md">
                 {project.description}
               </p>
+              {project.link ? <a href={project.link} className="underline text-blue-500">Click Here</a> :null}
             </div>
           </div>
         ))}
+        
       </div>
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12 " />
     </motion.div>

@@ -9,7 +9,7 @@ const ExperienceCard = ({
   startDate,
   endDate,
   type,
-  languages
+  languages,
 }) => {
   return (
     <article className="flex flex-col rounded-lg mt-10 items-center space-y-7 flex-shrink-0 w-full sm:w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-10 cursor-pointer transition-opacity duration-200 overflow-hidden">
@@ -26,7 +26,7 @@ const ExperienceCard = ({
         <p className="font-bold text-2xl mt-1">{type}</p>
         <div className="flex space-x-2 my-2">
           {languages.map((l, index) => (
-            <img className="h-10 w-10 rounded-full" src={l} />
+            <img key={index} className="h-10 w-10 rounded-full" src={l} />
           ))}
           <img className="h-10 w-10 rounded-full" src={reactlogo} />
         </div>
